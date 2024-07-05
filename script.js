@@ -34,24 +34,3 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
-
-const card1 = document.querySelector('#card1');
-const card2 = document.querySelector('#card2');
-const card3 = document.querySelector('#card3');
-
-card1.addEventListener("click", () => {
-    window.location.href = "https://foodjp-beige.vercel.app/"
-}) 
-
-card2.addEventListener("click", () => {
-    window.location.href =  "https://desafio-steam.vercel.app/"
-}) 
-
-card3.addEventListener("click", () => {
-    window.location.href = "https://atipcanada.com/"
-}) 
-
-
-// https://desafio-steam.vercel.app/
-
-// https://atipcanada.com/
