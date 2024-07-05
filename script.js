@@ -33,5 +33,4 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 
-// Chama a função uma vez para garantir que os elementos visíveis ao carregar a página recebam a classe 'visible'
 revealOnScroll();
