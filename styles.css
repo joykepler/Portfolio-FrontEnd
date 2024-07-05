@@ -9,6 +9,7 @@
 body {
     background-color: #0b0017;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -20,6 +21,7 @@ header {
     justify-content: space-around;
     align-items: center;
     z-index: 9999;
+    transition: background-color 0.3s ease;
 }
 
 header h1 {
@@ -60,6 +62,14 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero__content {
@@ -89,6 +99,11 @@ nav a:hover {
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero__btn:hover {
+    background: #5a00d1;
 }
 
 .sobre {
@@ -97,6 +112,14 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     z-index: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.sobre.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .sobre__card {
@@ -139,7 +162,15 @@ nav a:hover {
 
 .projetos {
     margin-top: 200px;
-} 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.projetos.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .projetos h2 {
     color: #fff;
@@ -179,6 +210,11 @@ nav a:hover {
     margin-top: 20px;
     font-size: 18px;
     font-weight: 500;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(123, 29, 255, 0.7);
 }
 
 footer {
@@ -247,25 +283,35 @@ footer .social-links a:hover {
     0 0 100px #ff2d75;
 }
 
-@keyframes animate
-{
-    0%
-    {
+@keyframes animate {
+    0% {
         transform: translateY(150vh) scale(0);
     }
-    100%
-    {
+    100% {
         transform: translateY(-10vh) scale(0.5);
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sobre__card {
+        width: 90%;
+        flex-direction: column;
+        padding: 10px;
+        gap: 25px;
+    }
 
+    .sobre__card img {
+        width: 250px;
+    }
+
+    .projetos__cards {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-    
-    header  h1 {
+    header h1 {
         font-size: 24px;
     }
 
@@ -303,10 +349,6 @@ footer .social-links a:hover {
         font-size: 14px;
     }
 
-    .menu-hamburguer { 
-        display: flex;
-    }
-    
     .hero__content {
         max-width: 300px;
     }
@@ -324,20 +366,20 @@ footer .social-links a:hover {
     }
 
     .sobre__card {
-        width: 850px;
+        width: 90%;
         flex-direction: column;
         padding: 10px;
         gap: 25px;
     }
 
     .sobre__card img {
-        width: 300px;
+        width: 200px;
         border-radius: 10px;
     }
 
     .sobre__card h2 {
         text-align: center;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .sobre__card p {
@@ -356,7 +398,7 @@ footer .social-links a:hover {
 
     .projetos__cards {
         flex-direction: column;
-        gap: 80px;
+        gap: 50px;
         margin-top: 50px;
     }
 
@@ -379,5 +421,4 @@ footer .social-links a:hover {
     .bubbles {
         display: none;
     }
-    
 }
