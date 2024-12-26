@@ -151,17 +151,17 @@ nav a:hover {
     color: #fff;
     font-weight: 400;
     font-size: 20px;
-    max-width: 600px;
+    max-width: 800px;
 }
 
-.sobre__texto span {
-    background: -webkit-linear-gradient(right, #990aff, hwb(277 35% 0%), #990aff);
+/* .sobre__texto span {
+    background: -webkit-linear-gradient(right, #b773e8, #9235cb, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 .projetos {
-    margin-top: 200px;
+    margin-top: 150px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
@@ -274,7 +274,7 @@ footer .social-links a:hover {
     0 0 50px #4fc3dc,
     0 0 100px #4fc3dc;
     animation: animate 15s linear infinite;
-    animation-duration: calc(55s / var(--i));
+    animation-duration: calc(200s / var(--i));
     z-index: 0;
 }
 
@@ -287,7 +287,7 @@ footer .social-links a:hover {
 
 @keyframes animate {
     0% {
-        transform: translateY(150vh) scale(0);
+        transform: translateY(200vh) scale(0);
     }
     100% {
         transform: translateY(-10vh) scale(0.5);
