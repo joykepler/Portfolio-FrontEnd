@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -154,11 +155,19 @@ nav a:hover {
     max-width: 800px;
 }
 
-/* .sobre__texto span {
-    background: -webkit-linear-gradient(right, #b773e8, #9235cb, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
+.div1 {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    gap: 200px;
+}
+
+.div2 {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    gap: 200px;
+}
 
 .projetos {
     margin-top: 150px;
@@ -294,9 +303,9 @@ footer .social-links a:hover {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .sobre__card {
-        width: 90%;
+        width: 60%;
         flex-direction: column;
         padding: 10px;
         gap: 25px;
@@ -308,8 +317,26 @@ footer .social-links a:hover {
 
     .projetos__cards {
         flex-direction: column;
-        gap: 50px;
+        gap: 60px;
+        justify-content: center;
+        align-items: center;
     }
+
+    .div1 {
+        gap: 60px;
+        width: 90%;
+    }
+
+    .div2 {
+        gap: 60px;
+        width: 90%;
+    }
+
+    .card {
+        height: 370px;
+        width: 350px;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -400,12 +427,23 @@ footer .social-links a:hover {
 
     .projetos__cards {
         flex-direction: column;
-        gap: 50px;
+        gap: 60px;
         margin-top: 50px;
+    }
+
+    .div1 {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .div2 {
+        flex-direction: column;
+        gap: 60px;
     }
 
     .card {
         height: 400px;
+        width: 350px;
     }
 
     footer {
